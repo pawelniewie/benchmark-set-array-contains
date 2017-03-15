@@ -1,0 +1,1 @@
+Run the benchmark with `mvn package exec:exec`
