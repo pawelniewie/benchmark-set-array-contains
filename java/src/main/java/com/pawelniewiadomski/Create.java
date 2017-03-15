@@ -38,15 +38,26 @@ import java.util.*;
 import static java.util.Collections.unmodifiableList;
 
 public class Create {
-    public static final List<String> values = unmodifiableList(Arrays.asList("application/pdf", "application/octet-stream", "application/x-pdf"));
+    public static final List<String> values = unmodifiableList(Arrays.asList(
+            "application/vnd.ms-excel",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "application/vnd.ms-powerpoint",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "application/pdf",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "text/plain",
+            "application/rtf",
+            "image/jpeg"
+    ));
 
     @Benchmark
     public void createSet() {
-        new HashSet<String>(values);
+        new HashSet<>(values);
     }
 
     @Benchmark
     public void createArray() {
-        new ArrayList<String>(values);
+        new ArrayList<>(values);
     }
 }

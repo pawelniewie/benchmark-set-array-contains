@@ -47,7 +47,7 @@ public class ContainsHit {
 
     private final HashSet<String> set = new HashSet<>(values);
 
-    private final ArrayList<String> array = new ArrayList<String>(values);
+    private final ArrayList<String> array = new ArrayList<>(values);
 
     @Benchmark
     public void setContains() {
